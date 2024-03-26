@@ -1,5 +1,7 @@
 # VoiceSculptor
+
 This project aims to not only recognize speakers but also to extract meaningful features from their voices that reveal fascinating insights about their emotional states, physiological characteristics, age, gender, and even their regional accents.
+
 # Emotion and Speaker Recognition from Audio
 
 This project is focused on detecting emotions and recognizing speakers from audio files using deep learning models. We have two pre-trained models for this purpose: one for emotion detection and another for speaker recognition.
@@ -16,16 +18,19 @@ Before running the code, ensure you have the following prerequisites installed:
 ## Installation
 
 1. Clone the repository to your local machine:
+
    ```shell
    git clone https://github.com/pranay-5374/VoiceSculptor.git
    ```
 
 2. Navigate to the project directory:
+
    ```shell
    cd your-repo
    ```
 
 3. Install the required dependencies:
+
    ```shell
    pip install tensorflow keras
    ```
@@ -64,7 +69,7 @@ You can use the code to perform emotion detection and speaker recognition on aud
 
    ```python
    input_layer = layers.Input(shape=(input_shape,))
-   
+
    emotion_output = emotion_model(input_layer)
    speaker_output = speaker_model(input_layer)
    ```
@@ -74,7 +79,7 @@ You can use the code to perform emotion detection and speaker recognition on aud
    ```python
    emotion_output = layers.Dense(128, activation='relu')(emotion_output)
    emotion_output = layers.Dense(num_emotion_classes, activation='softmax', name='emotion_output')(emotion_output)
-   
+
    speaker_output = layers.Dense(128, activation='relu')(speaker_output)
    speaker_output = layers.Dense(num_speaker_classes, activation='softmax', name='speaker_output')(speaker_output)
    ```
